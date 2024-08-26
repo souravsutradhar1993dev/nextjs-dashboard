@@ -142,6 +142,9 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         </Link>
         <Button type="submit">Create Invoice</Button>
       </div>
+      <div aria-live="polite" aria-atomic="true">
+        {state.message && <p className="mt-2 text-sm text-red-500">{state.message}</p>}
+      </div>
     </form>
   );
 }
